@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "target": "ES2020",
+        "jsx": "react",
+        "allowImportingTsExtensions": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["*"]
+        }
+    },
+    "source": {
+          "include": "./test.js",
+          "excludePattern": "(node_modules/|docs|dist)"
+        },
+        "plugins": ["plugins/markdown"],
+        "templates": {
+          "cleverLinks": true,
+          "monospaceLinks": true
+        },
+    "opts": {
+          "recurse": true,
+          "destination": "./docs/",
+          "readme": "./readme/readme.md"},
+            "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
