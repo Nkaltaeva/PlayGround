@@ -66,3 +66,7 @@ function getValueFromArray(arr, i, j) {
   }
 }
 console.log(getValueFromArray(arr, i, j));
+
+const ar1 = [1, 5, 7]
+console.log(`Наш массив без значений и пробелов: ${ar1}`)
+console.log(`Наш массив со значеними и пробелами: ${ar1.join(", ")}`)
