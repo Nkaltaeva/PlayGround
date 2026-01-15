@@ -41,3 +41,25 @@ for (; i < 4; i++) {
   console.log(`показать ${i}`);
 }
 console.log(i);
+
+
+//сравнение двух массивов на идентичность 
+
+let arr1 = [2, 5, -3, -3, 10];
+let arr2 = [2, 5, -3, -3, 10];
+let result = true;
+
+// Сначала проверяем длину
+if (arr1.length !== arr2.length) {
+  result = false;
+} else {
+  // Сравниваем элементы по индексам
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      result = false;
+      break; // Выходим при первом несовпадении
+    }
+  }
+}
+
+console.log(result);
