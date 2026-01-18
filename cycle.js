@@ -63,3 +63,18 @@ if (arr1.length !== arr2.length) {
 }
 
 console.log(result);
+
+//лестница чисел
+function printNumberStaircase(n) {
+  for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 0; j < i; j++) {
+      row += i + j;
+      if (j < i - 1) {
+        row += " ";
+      }
+    }
+    console.log(row);
+  }
+}
+console.log(printNumberStaircase(n));
