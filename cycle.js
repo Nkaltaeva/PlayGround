@@ -78,3 +78,17 @@ function printNumberStaircase(n) {
   }
 }
 console.log(printNumberStaircase(n));
+
+
+// Вы имеете двумерный массив в переменной arr, который содержит числа. Необходимо получить сумму всех положительных чисел в этом многомерном массиве и вывести в консоль.
+let arr = [[5, 32, 15, 9], [83, -22, 7], [], [81, 10, 0]];
+let totalSum = 0;
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    if (arr[i][j] > 0) {
+      totalSum += arr[i][j];
+    }
+  }
+  
+}
+console.log(totalSum);
