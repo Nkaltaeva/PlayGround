@@ -92,3 +92,17 @@ for (let i = 0; i < arr.length; i++) {
   
 }
 console.log(totalSum);
+
+// Функция должна принять массив и вернуть новый массив со всеми значениями принятого массива, но в обратном порядке.
+// Другими словами, нужно развернуть массив.
+
+let arr = [105, 104, 103, 102, 101];
+const arrayReverse = (arr) => {
+  const arrResult = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    arrResult.push(arr[i]);
+  }
+  return arrResult;
+};
+
+console.log(arrayReverse([105, 104, 103, 102, 101]));
