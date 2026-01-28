@@ -106,3 +106,16 @@ const arrayReverse = (arr) => {
 };
 
 console.log(arrayReverse([105, 104, 103, 102, 101]));
+
+// Необходимо реализовать функцию fillArrToLength, в нее передается массив и целое положительное число. Функция должна в массив добавить нули до нужного размера, размер передан вторым параметром.
+
+// Если массив имеет нужный размер (или больше), тогда функция никак не должна менять массив.
+
+function fillArrToLength(arr, length) {
+  for (let i = arr.length; i < length; i++) {
+    arr.push(0);
+  }
+}
+const arr1 = [2, 8];
+fillArrToLength(arr1, 5);
+console.log(arr1); // [2, 6, 8, 0, 0]
