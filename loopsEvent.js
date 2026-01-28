@@ -119,3 +119,17 @@ function fillArrToLength(arr, length) {
 const arr1 = [2, 8];
 fillArrToLength(arr1, 5);
 console.log(arr1); // [2, 6, 8, 0, 0]
+
+
+// Функция getArr принимает целое положительное число, необходимо реализовать функцию так, чтобы она возвращала массив, в котором будут записаны числа в убывающем порядке, которые кратны 3, до нуля включительно (смотри примеры).
+function getArr(num) {
+  const arr = [];
+  for (let i = num - (num % 3); i >= 0; i -= 3) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+console.log(getArr(15)); // [15, 12, 9, 6, 3, 0]
+console.log(getArr(17)); // [15, 12, 9, 6, 3, 0]
+console.log(getArr(22)); // [21, 18, 15, 12, 9, 6, 3, 0]
