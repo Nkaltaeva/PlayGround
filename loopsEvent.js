@@ -133,3 +133,37 @@ function getArr(num) {
 console.log(getArr(15)); // [15, 12, 9, 6, 3, 0]
 console.log(getArr(17)); // [15, 12, 9, 6, 3, 0]
 console.log(getArr(22)); // [21, 18, 15, 12, 9, 6, 3, 0]
+
+
+// Необходимо реализовать функцию printSquare, которая будет выводить квадрат в консоль.
+// Размер квадрата зависит от передаваемого в функцию аргумента.
+// Квадрат должен быть выведен за один раз (один раз используем console.log, передавая в него одну строку).
+// Аргумент должен быть целым числом, больше 1, если было передано некорректное значение, то ничего выводить не нужно.
+
+function printSquare(lines) {
+  if (lines < 2 || lines === !Number.isInteger(lines)) {
+    return;
+  }
+  let stringValue = "";
+  for (let row = 0; row < lines; row++) {
+    for (let col = 0; col < lines; col++) {
+      if (row === 0 || row === lines - 1 || col === 0 || col === lines - 1) {
+        stringValue += "# ";
+      } else {
+        stringValue += "  ";
+      }
+    }
+    stringValue = stringValue.trim();
+    stringValue += "\n";
+  }
+  console.log(stringValue);
+}
+
+/*
+  # # # # #
+  #       #
+  #       #
+  #       #
+  # # # # #
+  */
+printSquare(5);
