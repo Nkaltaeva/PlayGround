@@ -167,3 +167,19 @@ function printSquare(lines) {
   # # # # #
   */
 printSquare(5);
+
+/* Функция getNearestToMax принимает массив чисел, необходимо реализовать функцию так, чтобы она вернула массив, содержащий элементы переданного массива, которые отличны от наибольшего элемента, но не более чем на 10%. */
+function getNearestToMax(arr) {
+  const max = Math.max(...arr);
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= max * 0.9 && arr[i] !== max) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+console.log(getNearestToMax([5, 88, 95, 100, 77, 21, 92])); // [95, 92]
+console.log(getNearestToMax([2, 13, 95, 29, 19, 5, -5])); // []
+
