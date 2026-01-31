@@ -183,3 +183,20 @@ function getNearestToMax(arr) {
 console.log(getNearestToMax([5, 88, 95, 100, 77, 21, 92])); // [95, 92]
 console.log(getNearestToMax([2, 13, 95, 29, 19, 5, -5])); // []
 
+/* Реализуйте функцию randomShuffle, функция принимает массив и перемешивает элементы принятого массива в случайном порядке. */
+// Math.floor(Math.random() * (max - min + 1) + min)
+const randomShuffle = (arr) => {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const ranIdx = Math.trunc(Math.random() * (i + 1));
+    const tamp = arr[i];
+    arr[i] = arr[ranIdx];
+    arr[ranIdx] = tamp;
+  }
+};
+
+const myArr = [1, 2, 3, 4, 5];
+randomShuffle(myArr);
+
+// тот же массив, с теми же значениями, в случайном порядке
+console.log(myArr);
+
