@@ -31,3 +31,43 @@ function createCompanyObject(name, address, timeStart, timeEnd) {
   return obj;
 }
 console.log(createCompanyObject());
+
+
+// Посчитаем ингредиенты
+// Напишите функцию cakes(recipe, ingredients), которая рассчитывает количество пирожных, которое мы можем испечь. Функция принимает два объекта: 
+
+// recipe - рецепт, в котором прописаны ингридиенты и их количество для приготовления одного пирожного.
+// ingredients - доступные ингредиенты, которые мы имеем на кухне.
+
+// Функция должна вернуть максимальное количество пирожных, которое можно испечь (целое число).
+
+// Примечание
+// Для простоты, не существует единиц измерения количества (например, 1 фунт муки или 200 г сахара - это просто 1 или 200).
+// Ингредиенты, которых нет в предметах, можно рассматривать как 0.
+// Выводить ничего не нужно, необходимо только реализовать функцию.
+const recipe = {
+  apples: 3,
+  flour: 300,
+  sugar: 150,
+  milk: 100,
+};
+const ingredients = {
+  sugar: 500,
+  flour: 2000,
+  milk: 2000,
+  apples: 25,
+};
+
+function cakes(recipe, ingredients) {
+  let count = [];
+  for (const component in recipe) {
+    if (component in ingredients) {
+      count.push(Math.floor(ingredients[component] / recipe[component]));
+    } else {
+      count.push(0);
+    }
+  }
+  return Math.min(...count);
+}
+console.log(cakes());
+
