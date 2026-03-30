@@ -7,3 +7,19 @@
 
 // Если тип сообщения не равен одному из предложенных вариантов, функция должна выбросить ошибку Error с сообщением:
 // Неверный тип сообщения "ТИП_СООБЩЕНИЯ"
+
+function log(type, message) {
+  type = "ERROR";
+  message = "Не удалось получить данные";
+  if (
+    type !== "ERROR" &&
+    type !== "WARNING" &&
+    type !== "INFO" &&
+    type !== "DEBUG"
+  ) {
+    throw new Error(`Неверный тип сообщения "${type}"`);
+  }
+  console.log(`[${type}] ${message}`);
+}
+
+console.log(log());
